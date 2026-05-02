@@ -44,7 +44,6 @@
             </div>
         </div>
 
-        <!-- Substitua por <img src="..." class="hero-img"> quando tiver foto -->
         <div class="hero-visual">
             <div class="visual-card-back"></div>
             <div class="visual-card-main">
@@ -63,45 +62,49 @@
 
     <!-- SOBRE -->
     <section class="about" id="sobre">
-        <div class="about-img-area">
-            <img src="assets/foto-própria.jpg" class="about-img">
-            <!-- Substitua por <img src="..." class="about-img"> quando tiver foto -->
-            <div class="img-placeholder">🌸</div>
-            <div class="about-stat stat-1">
-                <span class="stat-number">100+</span>
-                <span class="stat-label">Peças feitas</span>
+        <!-- about-inner: centraliza o conteúdo com max-width em telas grandes -->
+        <div class="about-inner">
+            <div class="about-img-area">
+                <img src="assets/foto-própria.jpg" class="about-img">
+                <div class="img-placeholder">🌸</div>
+                <div class="about-stat stat-1">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Peças feitas</span>
+                </div>
+                <div class="about-stat stat-2">
+                    <span class="stat-number">★ 5.0</span>
+                    <span class="stat-label">Avaliação</span>
+                </div>
             </div>
-            <div class="about-stat stat-2">
-                <span class="stat-number">★ 5.0</span>
-                <span class="stat-label">Avaliação</span>
-            </div>
-        </div>
 
-        <div class="about-text">
-            <span class="section-badge">✦ Nossa história</span>
-            <h2>Sobre nós</h2>
-            <span class="about-accent"></span>
-            <p>
-                Com apenas 17 anos, uma menina encantada pela arte e pelo artesanato, curiosa e dedicada, transformou
-                fios e agulhas em muito mais do que um hobby. Entre tentativas, erros e aprendizados, o crochê se tornou
-                seu refúgio, um lugar onde o tempo desacelera e a criatividade floresce.
-            </p>
-            <p>
-                Foi desse amor que nasceu a Liih Fiore. Uma marca que carrega em seu nome a essência da delicadeza:
-                “Fiore”, flor, representa aquilo que floresce em cada detalhe, em cada ponto cuidadosamente feito à mão.
-            </p>
-            <p>
-                O que antes era apenas um passatempo, hoje se transforma em lembranças, carinho e significado. Cada
-                criação é única, feita com intenção, paciência e afeto, como uma pequena história entrelaçada em fios.
-            </p>
-            <p>
-                A Liih Fiore é mais do que uma loja de crochê. É um espaço onde o artesanal ganha vida, onde o simples
-                se transforma em especial e onde cada fio conta uma história.
-            </p>
-            <div class="about-pills">
-                <span class="value-pill">Artesanal</span>
-                <span class="value-pill">Exclusivo</span>
-                <span class="value-pill">Com amor</span>
+            <div class="about-text">
+                <span class="section-badge">✦ Nossa história</span>
+                <h2>Sobre nós</h2>
+                <span class="about-accent"></span>
+                <p>
+                    Com apenas 17 anos, uma menina encantada pela arte e pelo artesanato, curiosa e dedicada,
+                    transformou fios e agulhas em muito mais do que um hobby. Entre tentativas, erros e aprendizados, o
+                    crochê se tornou seu refúgio, um lugar onde o tempo desacelera e a criatividade floresce.
+                </p>
+                <p>
+                    Foi desse amor que nasceu a Liih Fiore. Uma marca que carrega em seu nome a essência da delicadeza:
+                    "Fiore", flor, representa aquilo que floresce em cada detalhe, em cada ponto cuidadosamente feito à
+                    mão.
+                </p>
+                <p>
+                    O que antes era apenas um passatempo, hoje se transforma em lembranças, carinho e significado. Cada
+                    criação é única, feita com intenção, paciência e afeto, como uma pequena história entrelaçada em
+                    fios.
+                </p>
+                <p>
+                    A Liih Fiore é mais do que uma loja de crochê. É um espaço onde o artesanal ganha vida, onde o
+                    simples se transforma em especial e onde cada fio conta uma história.
+                </p>
+                <div class="about-pills">
+                    <span class="value-pill">Artesanal</span>
+                    <span class="value-pill">Exclusivo</span>
+                    <span class="value-pill">Com amor</span>
+                </div>
             </div>
         </div>
     </section>
@@ -131,21 +134,17 @@
                 <span class="section-badge">✦ Fale conosco</span>
                 <h2>Contato</h2>
                 <span class="about-accent"></span>
-                <p>Tem alguma dúvida, encomenda especial ou quer saber mais sobre nossos produtos? Manda uma mensagem —
+                <p>Tem alguma dúvida, encomenda especial ou quer saber mais sobre nossos produtos? Manda uma mensagem
                     respondemos com carinho.</p>
                 <div class="contact-links">
-                    <div class="contact-link">
+                    <a href="https://wa.me/5561999069113" class="contact-link" target="_blank" rel="noopener">
                         <span class="contact-icon">📱</span>
                         <span>WhatsApp</span>
-                    </div>
-                    <div class="contact-link">
+                    </a>
+                    <a href="https://www.instagram.com/liihfiore/" class="contact-link" target="_blank" rel="noopener">
                         <span class="contact-icon">📸</span>
                         <span>Instagram</span>
-                    </div>
-                    <div class="contact-link">
-                        <span class="contact-icon">✉️</span>
-                        <span>E-mail</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -163,23 +162,54 @@
                     <textarea id="mensagem" name="mensagem" rows="5"
                         placeholder="Conte sobre sua encomenda ou dúvida..."></textarea>
                 </div>
-                <button class="form-btn">Enviar mensagem</button>
+                <button class="form-btn" id="formBtn">Enviar mensagem</button>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-inner">
+        <div class="footer-top">
+
             <div class="footer-brand">
                 <div class="logo footer-logo">Liih <span>Fiore</span></div>
-                <p>Delicado como um Fiore</p>
+                <span class="footer-tagline">Delicado como um Fiore</span>
+                <p class="footer-desc">Peças únicas feitas à mão com carinho, dedicação e amor em cada ponto.</p>
             </div>
-            <div class="footer-copy">
-                <p>© 2026 Liih | Fiore — Todos os direitos reservados</p>
-                <p>Feito com 🌸 e muito carinho</p>
+
+            <div class="footer-col">
+                <p class="footer-col-title">Navegação</p>
+                <nav class="footer-links">
+                    <a href="#sobre" class="footer-link"><span class="footer-dot"></span>Sobre nós</a>
+                    <a href="#galeria" class="footer-link"><span class="footer-dot"></span>Galeria</a>
+                    <a href="#contato" class="footer-link"><span class="footer-dot"></span>Contato</a>
+                </nav>
             </div>
+
+            <div class="footer-col">
+                <p class="footer-col-title">Redes sociais</p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/5561999069113" class="footer-social" target="_blank" rel="noopener">
+                        <span class="footer-social-icon">📱</span> WhatsApp
+                    </a>
+                    <a href="https://www.instagram.com/liihfiore/" class="footer-social" target="_blank" rel="noopener">
+                        <span class="footer-social-icon">📸</span> Instagram
+                    </a>
+                </div>
+            </div>
+
         </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copy">© 2026 Liih Fiore — Todos os direitos reservados</span>
+            <span class="footer-dev">
+                Site desenvolvido por
+                <a href="https://erick-rocha-web.github.io/Portfolio/" target="_blank" rel="noopener">Erick Roberto
+                    Araújo Rocha</a>
+            </span>
+        </div>
+
+        <div class="footer-floral">✦ &nbsp; 🌸 &nbsp; ✦ &nbsp; 🌸 &nbsp; ✦ &nbsp; 🌸 &nbsp; ✦</div>
     </footer>
 
     <script src="script.js"></script>

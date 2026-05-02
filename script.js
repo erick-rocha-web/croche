@@ -59,3 +59,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+// ================================================
+//  FORMULÁRIO — envia mensagem pelo WhatsApp
+// ================================================
+const formBtn = document.getElementById('formBtn');
+
+formBtn.addEventListener('click', () => {
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    // Validação básica
+    if (!nome || !mensagem) {
+        alert('Por favor, preencha pelo menos o nome e a mensagem.');
+        return;
+    }
+
+    // Monta o texto da mensagem
+    const texto = `Olá! Me chamo *${nome}* email: ${email ? ` (${email})` : ''}. 😊\n\n${mensagem}`;
+
+    // Número da Liih (código do Brasil: 55)
+    const numero = '5561999069113';
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+});
