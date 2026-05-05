@@ -682,6 +682,11 @@ body {
 }
 
 /* Formulário */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
 .contact-form-wrap {
     flex: 1;
     display: flex;
